@@ -1,3 +1,3 @@
 <template>
-  <p><strong>Herzlichen Dank. Ihre Daten wurden erfolgreich übermittelt.</strong></p>
+  <p>Herzlichen Dank. Ihre Daten wurden erfolgreich übermittelt.</p>
 </template>

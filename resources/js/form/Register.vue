@@ -12,11 +12,11 @@
       <form v-if="isFetched">
         <form-grid>
           <form-group class="col-span-6">
-            <select v-model="form.event" class="w-full border-0 px-10 lg:py-15 w-full text-base font-black ring-0 focus:ring-0 outline-none">
-                <option v-for="event in events" :key="event.id" :value="event.title">
-                  {{ event.title }}
-                </option>
-              </select>
+            <select v-model="form.event" class="w-full border-0 px-10 lg:py-15 w-full font-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 text-md ring-0 focus:ring-0 outline-none">
+              <option v-for="event in events" :key="event.id" :value="event.title">
+                {{ event.title }}
+              </option>
+            </select>
           </form-group>
         </form-grid>
         <form-grid>
@@ -136,14 +136,14 @@ export default {
     return {
 
       form: {
-        event: 'Nothelferkurs: Samstag, 17. Juli 2023',
-        firstname: 'Marcel',
-        name: 'Stadelmann',
-        address: 'Letzigraben 149',
-        zip_city: '8047 Zürich',
-        phone: '079 123 45 67',
-        email: 'm@marceli.to',
-        message: 'Test Test',
+        event: null,
+        firstname: null,
+        name: null,
+        address: null,
+        zip_city: null,
+        phone: null,
+        email: null,
+        message: null,
       },
 
       events: [],

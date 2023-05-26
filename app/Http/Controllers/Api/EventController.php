@@ -14,7 +14,7 @@ class EventController extends Controller
    */
   public function get()
   { 
-    $events = Entry::query()->where('collection', 'events')->orderBy('event_date')->get();
+    $events = Entry::query()->where('collection', 'events')->where('event_date', '>', date('Y-m-d'))->orderBy('event_date')->get();
 
     // filter out everything execpt the id and the title
     $events = $events->map(function ($event) {
