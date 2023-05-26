@@ -98,7 +98,7 @@
         </form-grid>
         <form-group>
           <button 
-            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'pointer-events-none select-none', 'bg-ocean font-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
+            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
             type="button"
             @click.prevent="submit()">
             Absenden
