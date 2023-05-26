@@ -1,0 +1,18 @@
+/**
+ * Typography - Webfonts
+ * -----------------------------------------------------------------------------
+ */
+
+ @font-face {
+  font-family: 'unineue-black';
+  src: url('../fonts/unineue-black-webfont.woff2') format('woff2'), url('../fonts/unineue-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'unineue-regular';
+  src: url('../fonts/unineue-regular-webfont.woff2') format('woff2'),  url('../fonts/unineue-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

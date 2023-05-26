@@ -1,0 +1,8 @@
+<div class="{{ theme == 'dark' ? 'bg-ocean' : 'bg-sky'}} px-15 py-30 mb-15 md:mb-0 {{ class }}">
+  {{ if title }}
+    <h3 class="{{ theme == 'dark' ? 'text-sky' : 'text-ocean'}}">{{ title }}</h3>
+  {{ /if }}
+  {{ if text }}
+   <p class="{{ theme == 'dark' ? 'text-white' : 'text-black'}}">{{ text }}</p>
+  {{ /if }}
+</div>

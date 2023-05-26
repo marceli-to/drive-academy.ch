@@ -1,0 +1,36 @@
+{
+  "resources/css/fonts/unineue-black-webfont.woff": {
+    "file": "assets/unineue-black-webfont-44defa32.woff",
+    "src": "resources/css/fonts/unineue-black-webfont.woff"
+  },
+  "resources/css/fonts/unineue-black-webfont.woff2": {
+    "file": "assets/unineue-black-webfont-9e71de5b.woff2",
+    "src": "resources/css/fonts/unineue-black-webfont.woff2"
+  },
+  "resources/css/fonts/unineue-regular-webfont.woff": {
+    "file": "assets/unineue-regular-webfont-983bd459.woff",
+    "src": "resources/css/fonts/unineue-regular-webfont.woff"
+  },
+  "resources/css/fonts/unineue-regular-webfont.woff2": {
+    "file": "assets/unineue-regular-webfont-2edae709.woff2",
+    "src": "resources/css/fonts/unineue-regular-webfont.woff2"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-eb867c14.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/unineue-black-webfont-9e71de5b.woff2",
+      "assets/unineue-black-webfont-44defa32.woff",
+      "assets/unineue-regular-webfont-2edae709.woff2",
+      "assets/unineue-regular-webfont-983bd459.woff"
+    ],
+    "css": [
+      "assets/app-eb867c14.css"
+    ],
+    "file": "assets/app-0cacbd1c.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

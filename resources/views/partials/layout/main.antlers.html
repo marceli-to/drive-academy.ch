@@ -1,0 +1,14 @@
+<main class="flex-1 pt-70 md:pt-105">
+  {{ if is_homepage }}
+    {{ partial:views/intro }}
+    {{ partial:views/offer }}
+    {{ partial:views/about }}
+    {{ partial:views/pricing }}
+    {{ partial:views/form }}
+    {{ partial:views/contact }}
+
+
+  {{ else }}
+    {{ partial:views/content }}
+  {{ endif }}
+</main>
