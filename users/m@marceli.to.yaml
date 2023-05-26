@@ -13,5 +13,9 @@ preferences:
         - phone
     events:
       columns:
-        - title
         - event_date
+        - title
+    registration:
+      columns:
+        - title
+        - status

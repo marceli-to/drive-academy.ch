@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 @import "typo/webfonts.css";
 @import "components/headings.css";
+@import "components/select.css";
 @import "layout/base.css";
 
 

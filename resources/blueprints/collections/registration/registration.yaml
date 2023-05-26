@@ -1,122 +1,126 @@
-sections:
+title: Registration
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: event
-        field:
-          input_type: text
-          antlers: false
-          display: Event
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: firstname
-        field:
-          input_type: text
-          antlers: false
-          display: Firstname
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: name
-        field:
-          input_type: text
-          antlers: false
-          display: Name
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: address
-        field:
-          input_type: text
-          antlers: false
-          display: Address
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: zip_city
-        field:
-          input_type: text
-          antlers: false
-          display: 'ZIP, City'
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: phone
-        field:
-          input_type: text
-          antlers: false
-          display: Phone
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-      -
-        handle: email
-        field:
-          input_type: email
-          antlers: false
-          display: E-Mail
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-            - email
-      -
-        handle: message
-        field:
-          antlers: false
-          display: Message
-          type: textarea
-          icon: textarea
-          listable: hidden
-          instructions_position: above
-          visibility: visible
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: event
+            field:
+              input_type: text
+              antlers: false
+              display: Event
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: firstname
+            field:
+              input_type: text
+              antlers: false
+              display: Firstname
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              display: Name
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: address
+            field:
+              input_type: text
+              antlers: false
+              display: Address
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: zip_city
+            field:
+              input_type: text
+              antlers: false
+              display: 'ZIP, City'
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: phone
+            field:
+              input_type: text
+              antlers: false
+              display: Phone
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              display: E-Mail
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+                - email
+          -
+            handle: message
+            field:
+              antlers: false
+              display: Message
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-title: Registration
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true

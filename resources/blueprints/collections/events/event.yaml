@@ -1,20 +1,44 @@
-sections:
+title: Event
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
+        fields:
+          -
+            handle: event_date
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: Date
+              icon: date
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              format: d.m.Y
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-title: Event
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
