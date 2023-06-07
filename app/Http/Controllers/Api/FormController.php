@@ -6,6 +6,7 @@ use Statamic\Fields\Value;
 use App\Http\Requests\RegisterStoreRequest;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\RegisterOwnerEmail;
+use App\Notifications\RegisterUserEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -32,6 +33,7 @@ class FormController extends Controller
     
     $registration->save();
     Notification::route('mail', env('MAIL_TO'))->notify(new RegisterOwnerEmail($registration));
+    Notification::route('mail', $request->input('email'))->notify(new RegisterUserEmail($registration));
     return response()->json($registration->id, 201);
   }
 

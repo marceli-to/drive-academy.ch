@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class RegisterOwnerEmail extends Notification
+class RegisterUserEmail extends Notification
 {
   use Queueable;
 
@@ -40,8 +40,8 @@ class RegisterOwnerEmail extends Notification
   {
     return (new MailMessage)
       ->from('ps@drive-academy.ch')
-      ->subject('Neue Anmeldung drive-academy.ch')
-      ->markdown('mail.registration.owner', ['data' => $this->data]);
+      ->subject('Anmeldung drive-academy.ch')
+      ->markdown('mail.registration.user', ['data' => $this->data]);
   }
 
   /**

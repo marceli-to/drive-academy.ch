@@ -19,4 +19,8 @@
   <strong>Telefon</strong><br>
   {{ $data->phone }}
 </div>
+<div class="text-base pb-base">
+  <strong>Nachricht</strong><br>
+  {!! nl2br($data->message) !!}
+</div>
 </x-mail::message>
