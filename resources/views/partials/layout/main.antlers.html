@@ -8,6 +8,10 @@
     {{ partial:views/contact }}
     {{ partial:views/partner }}
   {{ else }}
-    {{ partial:views/content }}
+    {{ if slug == 'datenschutz' }}
+      {{ partial:views/privacy }}
+    {{ else }}
+      {{ partial:views/content }}
+    {{ endif }}
   {{ endif }}
 </main>

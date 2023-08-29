@@ -76,6 +76,15 @@ a[class="scroll-mt-80 md:scroll-mt-125"] {
   @apply !mb-0
 }
 
+.content-privacy [class*="_h1"],
+.content-privacy [class*="_h2"] {
+  @apply uppercase font-black leading-9 text-xl text-ocean mb-25 max-w-[300px] md:max-w-none;
+}
+
+.content-privacy [class*="_h2"] {
+  @apply  text-lg;
+}
+
 .content-privacy p {
   @apply mb-30
 }
