@@ -11,7 +11,7 @@
 
       <template v-if="isFetched">
         <form v-if="hasEvents">
-          <div class="mb-20">Der <a href="https://thomai.ch/angebot/verkehrskundeunterricht/" class="text-ocean" target="_blank">VKU</a> und <a href="https://thomai.ch/angebot/nothilfekurs/" class="text-ocean" target="_blank">Nothelferkurs</a> findet bei der Fahrschule <a href="https://thomai.ch/" class="text-ocean" target="_blank">Thomai Lüthi</a> in Bauma statt.</div>
+          <!-- <div class="mb-20">Der <a href="https://thomai.ch/angebot/verkehrskundeunterricht/" class="text-ocean" target="_blank">VKU</a> und <a href="https://thomai.ch/angebot/nothilfekurs/" class="text-ocean" target="_blank">Nothelferkurs</a> findet bei der Fahrschule <a href="https://thomai.ch/" class="text-ocean" target="_blank">Thomai Lüthi</a> in Bauma statt.</div> -->
 
           <form-grid>
             <form-group class="col-span-6">
