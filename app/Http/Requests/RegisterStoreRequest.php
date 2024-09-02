@@ -43,8 +43,7 @@ class RegisterStoreRequest extends FormRequest
     return [
       'name.required' => 'Name wird benötigt!',
       'firstname.required' => 'Vorname wird benötigt!',
-      'address.required' => 'Adresse wird benötigt!',
-      'zip_city.required' => 'PLZ/Ort wird benötigt!',
+      'option.required' => 'Option wird benötigt!',
       'phone.required' => 'Telefon wird benötigt!',
       'email.required' => 'E-Mail wird benötigt!',
       'email.email' => 'E-Mail ist ungültig!',

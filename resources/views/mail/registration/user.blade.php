@@ -7,6 +7,10 @@
     Nachfolgend eine Zusammenfassung Deiner Angaben:
   </div>
   <div class="text-base pb-base">
+    <strong>Anmeldung für</strong><br>
+    {{ $data->option }}
+  </div>
+  <div class="text-base pb-base">
     <strong>Vorname</strong><br>
     {{ $data->firstname }}
   </div>

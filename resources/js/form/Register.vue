@@ -1,85 +1,83 @@
 <template>
-    <template v-if="isSent">
-      <feedback />
-    </template>
-    <template v-else>
-      <validation-errors 
-        :validationErrors="validationErrors"  
-        v-if="validationErrors.length > 0">
-      </validation-errors>
-      <form>
-        <form-grid>
-          <form-group class="col-span-6">
-            <select v-model="form.option" class="border-0 px-10 lg:py-15 w-full font-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
-              <option v-for="option in options" :key="option" :value="option">{{ option }}</option>
-            </select>
-          </form-group>
-        </form-grid>
-        <form-grid>
-          <form-group :error="errors.firstname" class="mb-15 md:mb-0">
-            <form-input 
-              type="text" 
-              v-model="form.firstname" 
-              placeholder="Vorname*"
-              :error="errors.firstname"
-              @blur="validateField('firstname')"
-              @focus="removeError('firstname')">
-            </form-input>
-          </form-group>
-          <form-group :error="errors.name">
-            <form-input 
-              type="text" 
-              v-model="form.name" 
-              placeholder="Name*"
-              :error="errors.name"
-              @blur="validateField('name')"
-              @focus="removeError('name')">
-            </form-input>
-          </form-group>
-        </form-grid>
-        <form-grid>
-          <form-group :error="errors.phone" class="mb-15 md:mb-0">
-            <form-input 
-              type="text" 
-              v-model="form.phone" 
-              placeholder="Telefon*"
-              :error="errors.phone"
-              @blur="validateField('phone')"
-              @focus="removeError('phone')">
-            </form-input>
-          </form-group>
-          <form-group :error="errors.email">
-            <form-input 
-              type="email" 
-              v-model="form.email" 
-              placeholder="E-Mail*"
-              :error="errors.email"
-              @blur="validateEmail()"
-              @focus="removeError('email')">
-            </form-input>
-          </form-group>
-        </form-grid>
-        <form-grid>
-          <form-group class="col-span-12">
-            <form-textarea 
-              v-model="form.message" 
-              placeholder="Mitteilung"
-              :error="errors.message"
-              @blur="validateField()"
-              @focus="removeError('message')">
-            </form-textarea>
-          </form-group>
-        </form-grid>
-        <form-group>
-          <button 
-            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
-            type="button"
-            @click.prevent="submit()">
-            Absenden
-          </button>
+  <div>
+    <feedback v-if="isSent" />
+    <validation-errors 
+      :validationErrors="validationErrors"  
+      v-if="validationErrors.length > 0">
+    </validation-errors>
+    <form>
+      <form-grid>
+        <form-group class="col-span-6">
+          <select v-model="form.option" class="border-0 px-10 lg:py-15 w-full font-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
+            <option v-for="option in options" :key="option" :value="option">{{ option }}</option>
+          </select>
         </form-group>
-      </form>
-    </template>
+      </form-grid>
+      <form-grid>
+        <form-group :error="errors.firstname" class="mb-15 md:mb-0">
+          <form-input 
+            type="text" 
+            v-model="form.firstname" 
+            placeholder="Vorname*"
+            :error="errors.firstname"
+            @blur="validateField('firstname')"
+            @focus="removeError('firstname')">
+          </form-input>
+        </form-group>
+        <form-group :error="errors.name">
+          <form-input 
+            type="text" 
+            v-model="form.name" 
+            placeholder="Name*"
+            :error="errors.name"
+            @blur="validateField('name')"
+            @focus="removeError('name')">
+          </form-input>
+        </form-group>
+      </form-grid>
+      <form-grid>
+        <form-group :error="errors.phone" class="mb-15 md:mb-0">
+          <form-input 
+            type="text" 
+            v-model="form.phone" 
+            placeholder="Telefon*"
+            :error="errors.phone"
+            @blur="validateField('phone')"
+            @focus="removeError('phone')">
+          </form-input>
+        </form-group>
+        <form-group :error="errors.email">
+          <form-input 
+            type="email" 
+            v-model="form.email" 
+            placeholder="E-Mail*"
+            :error="errors.email"
+            @blur="validateEmail()"
+            @focus="removeError('email')">
+          </form-input>
+        </form-group>
+      </form-grid>
+      <form-grid>
+        <form-group class="col-span-12">
+          <form-textarea 
+            v-model="form.message" 
+            placeholder="Mitteilung"
+            :error="errors.message"
+            @blur="validateField()"
+            @focus="removeError('message')">
+          </form-textarea>
+        </form-group>
+      </form-grid>
+      <form-group>
+        <button 
+          :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
+          type="button"
+          @click.prevent="submit()">
+          Absenden
+        </button>
+      </form-group>
+    </form>
+  </div>
 </template>
 <script>
 import NProgress from 'nprogress';
@@ -142,13 +140,7 @@ export default {
 
       isSent: false,
       isLoading: false,
-      isFetched: false,
-      hasEvents: false,
     }
-  },
-
-  mounted() {
-    //this.getEvents();
   },
 
   methods: {
@@ -215,10 +207,9 @@ export default {
 
     reset() {
       this.form = {
+        option: 'Fahrstunden Neulenker',
         firstname: null,
         name: null,
-        address: null,
-        zip_city: null,
         phone: null,
         email: null,
         message: null,

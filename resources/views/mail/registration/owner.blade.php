@@ -4,6 +4,10 @@
   <div class="font-regular">{{ $data->event }}</div>
 </div>
 <div class="text-base pb-base">
+  <strong>Anmeldung für</strong><br>
+  {{ $data->option }}
+</div>
+<div class="text-base pb-base">
   <strong>Vorname</strong><br>
   {{ $data->firstname }}
 </div>

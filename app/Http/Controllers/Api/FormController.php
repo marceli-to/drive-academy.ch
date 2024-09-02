@@ -18,7 +18,7 @@ class FormController extends Controller
    */
   public function store(RegisterStoreRequest $request)
   { 
-    $title = $request->input('event') . ' – ' . $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('email');
+    $title = $request->input('option') . ' – ' . $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('email');
     $registration = Entry::make()
     ->collection('registration')
     ->slug($title)
