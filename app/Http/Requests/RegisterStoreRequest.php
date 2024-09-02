@@ -26,10 +26,9 @@ class RegisterStoreRequest extends FormRequest
     return [
       'name' => 'required',
       'firstname' => 'required',
-      'address' => 'required',
-      'zip_city' => 'required',
       'phone' => 'required',
       'email' => 'required|email',
+      'option' => 'required',
     ];
   }
 
