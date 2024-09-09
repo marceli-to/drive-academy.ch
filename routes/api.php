@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\FormController;
 
 /*
@@ -16,6 +16,6 @@ use App\Http\Controllers\Api\FormController;
 |
 */
 
-// Route::get('/events', [EventController::class, 'get']);
+Route::get('/events', [EventController::class, 'get']);
 Route::post('/form/register', [FormController::class, 'store']);
 

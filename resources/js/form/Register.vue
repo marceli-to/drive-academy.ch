@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <feedback v-if="isSent" />
+  <template v-if="isSent">
+    <feedback />
+  </template>
+  <template v-else>
     <validation-errors 
       :validationErrors="validationErrors"  
       v-if="validationErrors.length > 0">
     </validation-errors>
-    <form>
+    <form v-if="isFetched">
       <form-grid>
         <form-group class="col-span-6">
           <select v-model="form.option" class="border-0 px-10 lg:py-15 w-full font-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
@@ -77,7 +79,7 @@
         </button>
       </form-group>
     </form>
-  </div>
+  </template>
 </template>
 <script>
 import NProgress from 'nprogress';
@@ -109,6 +111,7 @@ export default {
 
       form: {
         option: 'Fahrstunden Neulenker',
+        event: null,
         firstname: null,
         name: null,
         phone: null,
@@ -119,7 +122,7 @@ export default {
       options: [
         'Fahrstunden Neulenker',
         'Kontrollfahrten',
-        'VKU/Nothelferkurs',
+        // 'VKU/Nothelferkurs',
       ],
 
       errors: {
@@ -140,10 +143,26 @@ export default {
 
       isSent: false,
       isLoading: false,
+      isFetched: false,
+      hasEvents: false,
     }
   },
 
+  mounted() {
+    this.getEvents();
+  },  
+
   methods: {
+
+    getEvents() {
+      this.axios.get('/api/events').then(response => {
+        this.events = response.data;
+        if (this.events.length > 0) {
+          this.options = [...this.options, ...this.events.map(event => event.title)];
+        }
+        this.isFetched = true;
+      });
+    },
 
     submit() {
       this.isSent = false;
