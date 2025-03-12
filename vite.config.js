@@ -10,6 +10,15 @@ export default defineConfig({
       '@' : path.resolve(__dirname, './resources/js/')
     },
   },
+  server: {
+    cors: {
+      origin: ['https://drive-academy.ch.test'],
+      credentials: true,
+    },
+    hmr: {
+      host: 'localhost',
+    },
+  },
   plugins: [
     vue(),
     laravel([
