@@ -4,7 +4,7 @@
 <tr>
 <td class="content-cell" align="left">
 <div class="text-base pb-base">
-<strong>PS DRIVE ACADEMY<br>PATRICK STEINER</strong><br>
+<strong>PS Drive Academy GmbH<br>PATRICK STEINER</strong><br>
 Zihlstrasse 46b<br>
 8340 Hinwil
 </div>
