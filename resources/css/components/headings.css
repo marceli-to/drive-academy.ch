@@ -1,5 +1,5 @@
 h1, h2, h3 {
-  @apply uppercase font-black;
+  @apply uppercase font-unineue-black;
 }
 
 h1 {

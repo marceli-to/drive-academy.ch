@@ -23,8 +23,8 @@ module.exports = {
       },
 
       fontFamily: {
-        'black': ['unineue-black', ...defaultTheme.fontFamily.sans],
-        'regular': ['unineue-regular', ...defaultTheme.fontFamily.sans],
+        'unineue-black': ['unineue-black', ...defaultTheme.fontFamily.sans],
+        'unineue-regular': ['unineue-regular', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {

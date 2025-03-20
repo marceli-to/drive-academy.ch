@@ -15,7 +15,7 @@
 
         <form-grid>
           <form-group class="col-span-6">
-            <select v-model="form.event" class="w-full border-0 px-10 lg:py-15 w-full font-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
+            <select v-model="form.event" class="w-full border-0 px-10 lg:py-15 w-full font-unineue-black bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
               <option v-for="event in events" :key="event.id" :value="event.title">
                 {{ event.title }}
               </option>
@@ -101,7 +101,7 @@
         </form-grid>
         <form-group>
           <button 
-            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
+            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-unineue-black text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
             type="button"
             @click.prevent="submit()">
             Absenden
