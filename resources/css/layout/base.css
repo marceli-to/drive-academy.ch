@@ -26,9 +26,9 @@ nav.site-menu.is-visible {
   @apply max-w-[1200px] px-20 md:px-70 mx-auto;
 }
 
-strong {
+/* strong {
   @apply font-bold
-}
+} */
 
 p, ul {
   @apply max-w-[700px] mb-16

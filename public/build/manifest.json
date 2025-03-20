@@ -16,7 +16,7 @@
     "src": "resources/css/fonts/unineue-regular-webfont.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-3c60432d.css",
+    "file": "assets/app-94d762cc.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -27,9 +27,9 @@
       "assets/unineue-regular-webfont-983bd459.woff"
     ],
     "css": [
-      "assets/app-3c60432d.css"
+      "assets/app-94d762cc.css"
     ],
-    "file": "assets/app-4e25a66d.js",
+    "file": "assets/app-0a2fbe71.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
